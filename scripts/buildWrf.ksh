@@ -471,12 +471,12 @@ fi
 
 OS_NAME=`uname`
 
-if [ "$OS_NAME" -eq "Darwin" ]; then
+if [ "$OS_NAME" = "Darwin" ]; then
    TMPDIR=/Volumes/sysdisk1/$thisUser/tmp
    mkdir $TMPDIR
    TMPDIR=$TMPDIR/$BUILD_STRING
    mkdir $TMPDIR
-elif [ "$OS_NAME" -eq "Linux" -a -d /glade ]; then
+elif [ "$OS_NAME" = "Linux" -a -d /glade ]; then
    TMPDIR=/glade/scratch/$thisUser/tmp/$BUILD_STRING
    mkdir -p $TMPDIR
 else
